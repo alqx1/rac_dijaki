@@ -1,0 +1,19 @@
+1. Zazeni program v glavnem direktoriju z ukazem "python main.py".
+2. Ce datoteka "dijaki.csv" ne obstaja v glavnem direktoriju, bo ta datoteka ustvarjena.
+3. Pojavi se ti meni, kjer moras vpisati stevilko za izbiro funkcije.
+
+Funkcije:
+1. Izpisi dijake:
+    Funkcija ti izpise vse dijake, ki so prisotni v csv datoteki dijakov.
+2. Izpisi sortirane dijake:
+    Za izbiro dobis po cemu bi rad sortiral dijake, nato pa se, ce bi sortiral padajoce ali narastajoce.
+3. Dodaj dijaka:
+    Vnesi podatke, kakor kaze program. Po vnosu vse podatkov, se dijak shranil v trenutnem delovanju programa (dijak se ne bo se zapisal v datoteko). Ce so podatki nevalidni, bo funkcija izsla z napako.
+4. Izbrisi dijaka:
+    Vnesi ime in priimek dijaka, kakor kaze program. Ce vnesen dijak obstaja, bo izbrisan iz seznama, ce ne, bo program javil napako.
+5. Popravi dijaka:
+    Najprej vnesi ime in priimek dijaka za popravljanje. Nato vnesi podatke, ki bi jih rad spremenil. Ce kaksen podatek noces spremeniti, pusti vnos prazen in pritisni enter. Ce so vsi podatki validni, se bo dijak spremenil, drugace ti javi napako.
+6. Izracunaj povprecje:
+    Najprej iz menija izberi za kateri podatek bi izracunal povprecje. Nato izberi se, ce bi podatke filtriral po spolu. Ce ni bilo nobene napake v vnosu, ti program nato izpise povprecje.
+7. Izhod:
+    Ob izbiri izhoda se bodo vse spremembe na dijake shranile nazaj v datoteko. Nato se bo program ugasnil.
