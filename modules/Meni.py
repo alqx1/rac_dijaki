@@ -137,8 +137,12 @@ def dodaj_menu(dijaki: list[Dijak]) -> None:
     temp_podatki = []
     try:
         temp_podatki.append(int(input("Starost novega dijaka: ")))
-        temp_podatki.append(float(input("Višina novega dijaka: ")))
-        temp_podatki.append(float(input("Teža novega dijaka: ")))
+
+        visina = input("Višina novega dijaka: ").replace(",", ".")
+        temp_podatki.append(float(visina))
+
+        teza = input("Teža novega dijaka: ").replace(",", ".")
+        temp_podatki.append(float(teza))
     except ValueError:
         print("Napačen format vnosa!")
         return
@@ -224,14 +228,16 @@ def popravi_menu(dijaki: list[Dijak]) -> None:
 
         visina = input("Višina novega dijaka: ")
         if visina != "":
-            visina = int(visina)
+            visina = visina.replace(",", ".")
+            visina = float(visina)
             if visina < 0:
                 print("Višina  ne more biti negativna!")
                 return
 
         teza = input("Teža novega dijaka: ")
         if teza != "":
-            teza = int(teza)
+            teza = teza.replace(",", ".")
+            teza = float(teza)
             if teza < 0:
                 print("Teža ne more biti negativna!")
                 return
