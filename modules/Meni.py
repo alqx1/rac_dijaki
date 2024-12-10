@@ -190,6 +190,13 @@ def popravi_menu(dijaki: list[Dijak]) -> None:
         print("Dijak s tem imenom in priimkom ne obstaja!")
         return
 
+    print()
+    print("Če ne želite spremeniti podatka, pustite vnos prazen!")
+    print()
+
+    nov_ime = input("Novo ime dijaka: ")
+    nov_priimek = input("Nov priimek dijaka: ")
+
     print("Spol dijaka: ")
     print("1. Ženski spol")
     print("2. Moški spol")
@@ -211,21 +218,38 @@ def popravi_menu(dijaki: list[Dijak]) -> None:
         starost = input("Starost novega dijaka: ").strip(" ")
         if starost != "":
             starost = int(starost)
+            if starost < 0:
+                print("Starost ne more biti negativna!")
+                return
 
         visina = input("Višina novega dijaka: ")
         if visina != "":
             visina = int(visina)
+            if visina < 0:
+                print("Višina  ne more biti negativna!")
+                return
 
         teza = input("Teža novega dijaka: ")
         if teza != "":
             teza = int(teza)
+            if teza < 0:
+                print("Teža ne more biti negativna!")
+                return
+
     except ValueError:
         print("Napacen format vnosa!")
         return
 
+
     for d in dijaki:
         if d.get_ime() != ime or d.get_priimek() != priimek:
             continue
+
+        if nov_ime != "":
+            d.set_ime(nov_ime)
+            
+        if nov_priimek != "":
+            d.set_priimek(nov_priimek)
 
         if spol != "":
             d.set_spol(True if spol == "ž" else False)

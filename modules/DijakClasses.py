@@ -36,6 +36,12 @@ class Dijak:
         return self._teza
 
     # setters
+    def set_ime(self, ime: str) -> None:
+        self._ime = ime
+
+    def set_priimek(self, priimek: str) -> None:
+        self._priimek = priimek
+
     def set_starost(self, starost: int) -> None:
         self._starost = starost
 
